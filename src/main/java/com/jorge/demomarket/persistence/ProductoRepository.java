@@ -5,6 +5,7 @@ import com.jorge.demomarket.domain.repository.ProductRepository;
 import com.jorge.demomarket.persistence.crud.ProductoCrudRepository;
 import com.jorge.demomarket.persistence.entity.Producto;
 import com.jorge.demomarket.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,7 +13,12 @@ import java.util.Optional;
 
 @Repository // Especificamos a springBoot que esta clase se encarga de interactuar con la BD
 public class ProductoRepository implements ProductRepository {
+
+    @Autowired // Especificamos que Spring se encargue de crear las instancias del objeto definido
+    // Debemos tener en cuenta que el objeto q queremos injectar debe ser un componente de Spring
     private ProductoCrudRepository productoCrudRepository;
+
+    @Autowired
     private ProductMapper mapper;
 
     @Override
