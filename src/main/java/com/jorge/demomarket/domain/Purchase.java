@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Purchase {
     private int purchaseId;
-    private String clientid;
+    private String clientId;
     private LocalDateTime date;
     private String paymentMethod;
     private String comment;
@@ -20,12 +20,12 @@ public class Purchase {
         this.purchaseId = purchaseId;
     }
 
-    public String getClientid() {
-        return clientid;
+    public String getClientId() {
+        return clientId;
     }
 
-    public void setClientid(String clientid) {
-        this.clientid = clientid;
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
     }
 
     public LocalDateTime getDate() {
