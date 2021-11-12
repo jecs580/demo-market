@@ -3,9 +3,11 @@ package com.jorge.demomarket.web.security;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
+@Component
 public class JWTUtil {
     private static final String KEY="demomarket";
     public String generateToken(UserDetails userDetails){
